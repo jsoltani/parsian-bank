@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using
 $OrderId = time() . rand(000,999);
 $getPay  = \src\jsBankParsian::pay($OrderId, 1000);
 $getPay  = json_decode($getPay);

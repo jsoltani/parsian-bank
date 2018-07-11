@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using
 $Token = $_REQUEST['Token'] ?? '';
 $Status = $_REQUEST['status'] ?? -1;
 $TerminalNo = $_REQUEST['TerminalNo'] ?? '';
