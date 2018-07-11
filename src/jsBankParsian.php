@@ -15,7 +15,12 @@ class jsBankParsian
     private static $CallBackUrl        = "http://calback-page-in-here";
     private static $ParsianPin         = " parsian pin ";
 
-
+    /**
+     * connect to parsian bank gateway
+     * @param $OrderId -> factor number
+     * @param $Amount
+     * @return string
+     */
     public static function pay($OrderId, $Amount)
     {
         $client = new nusoap_client(self::$SaleServiceAddress, 'wsdl');
@@ -54,6 +59,13 @@ class jsBankParsian
 
     }
 
+    /**
+     * call after bank callback for verify
+     * @param $RRN -> reference number
+     * @param $Token
+     * @param $Status
+     * @return string
+     */
     public static function callback($RRN, $Token, $Status)
     {
         if ($RRN > 0 and $Status == 0) {
@@ -102,6 +114,13 @@ class jsBankParsian
 
     }
 
+    /**
+     * generate output
+     * @param int $Status
+     * @param string $Message
+     * @param array $Items
+     * @return string
+     */
     private static function response($Status = -1, $Message = '', $Items = []){
         $data = [
             'responseCode' => $Status,
@@ -111,6 +130,11 @@ class jsBankParsian
         return json_encode($data);
     }
 
+    /**
+     * bank error codes
+     * @param int $errCode
+     * @return string
+     */
     private static function errors($errCode = -1)
     {
         switch ($errCode) {
