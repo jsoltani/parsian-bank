@@ -1,0 +1,20 @@
+{
+	"name": "js/parsian-bank",
+    "type": "library",
+    "description": " parsian-bank is a class for connect to parsian bank ",
+    "authors": [
+        {
+            "name": "Javad soltani",
+            "email": "j.soltani.it@gmail.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.4"
+    },
+    "require-dev": {
+      "econea/nusoap": "dev-master"
+    },
+    "autoload": {
+      "classmap": ["src/"]
+    }
+}
