@@ -12,8 +12,10 @@ $Message = $getPay->responseMessage ?? 'Error';
 
 if($Code == 0){
     $Token = $getPay->responseItems->Token ?? '';
-    header('LOCATION: https://pec.shaparak.ir/NewIPG/?Token=' . $Token);
-    exit;
+    if(!empty($Token)){
+        header('LOCATION: https://pec.shaparak.ir/NewIPG/?Token=' . $Token);
+        exit;
+    }
 }
 
 die("<h2>Error : </h2><span>$Message</span>");
