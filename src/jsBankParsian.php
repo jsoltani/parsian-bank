@@ -115,6 +115,22 @@ class jsBankParsian
     }
 
     /**
+     * set callback page
+     * @param string $callbackPage
+     */
+    public static function setCallBackUrl($callbackPage = ''){
+        self::$CallBackUrl = $callbackPage;
+    }
+
+    /**
+     * set parsian pin for access to account
+     * @param string $parsianPin
+     */
+    public static function setParsianPin($parsianPin = ''){
+        self::$ParsianPin = $parsianPin;
+    }
+
+    /**
      * generate output
      * @param int $Status
      * @param string $Message

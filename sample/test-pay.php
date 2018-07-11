@@ -1,5 +1,9 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using
+
+// \src\jsBankParsian::setParsianPin('scsdsdfbdsthsgfnfgndg');
+// \src\jsBankParsian::setCallBackUrl('http://example.ir/callback');
+
 $OrderId = time() . rand(000,999);
 $getPay  = \src\jsBankParsian::pay($OrderId, 1000);
 $getPay  = json_decode($getPay);
