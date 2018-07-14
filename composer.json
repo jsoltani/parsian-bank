@@ -2,6 +2,10 @@
 	"name": "jsoltani/parsian-bank",
     "type": "library",
     "description": " parsian-bank is a class for connect to parsian bank ",
+    "homepage": "https://github.com/jsoltani/parsian-bank",
+    "license": "MIT",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Javad soltani",
