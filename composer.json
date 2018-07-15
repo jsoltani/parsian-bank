@@ -19,6 +19,9 @@
       "econea/nusoap": "dev-master"
     },
     "autoload": {
-      "classmap": ["src/"]
+      "classmap": ["src/"],
+        "psr-4": {
+            "src\\": "src/"
+        }
     }
 }

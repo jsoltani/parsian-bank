@@ -3,6 +3,7 @@
 namespace src;
 
 use nusoap_client;
+use src\jsTranslate as jsTranslate;
 
 /**
  * jsBankParsian
@@ -155,100 +156,100 @@ class jsBankParsian
     {
         switch ($errCode) {
             case -1 :
-                $err = "خطای سرور";
+                $err = jsTranslate::translate('serverError');
                 break;
             case -2 :
-                $err = "شماره فاکتور ثبت نشده است";
+                $err = jsTranslate::translate('factorNumberNotRegistered');
                 break;
             case -3 :
-                $err = "شماره فاکتور قبلا ثبت شده است";
+                $err = jsTranslate::translate('factorNumberHasAlreadyBeenRegistered');
                 break;
             case -32768 :
-                $err = "خطای ناشناخته رخ داده است";
+                $err = jsTranslate::translate('unknownErrorOccurred');
                 break;
             case -1540 :
-                $err = "تایید تراکنش ناموفق می باشد";
+                $err = jsTranslate::translate('confirmationTransactionFailed');
                 break;
             case -1528 :
-                $err = "اطلاعات پرداخت یافت نشد";
+                $err = jsTranslate::translate('paymentInformationWasNotFound');
                 break;
             case -1505 :
-                $err = "تایید تراکنش توسط پذیرنده انجام شد";
+                $err = jsTranslate::translate('transactionVerificationWasDoneByTheReceiver');
                 break;
             case -138 :
-                $err = "عملیات پرداخت توسط کاربر لغو شد";
+                $err = jsTranslate::translate('userPaymentCanceled');
                 break;
             case -132 :
-                $err = "مبلغ تراکنش کمتر از حد مجاز است";
+                $err = jsTranslate::translate('transactionAmountIsBelowTheLimit');
                 break;
             case -131 :
-                $err = "توکن نامعتبر است";
+                $err = jsTranslate::translate('tokenInvalid');
                 break;
             case -128 :
-                $err = "قالب آدرس IP معتبر نمی باشد";
+                $err = jsTranslate::translate('ipAddressInvalid');
                 break;
             case -127 :
-                $err = "آدرس اینترنتی نامعتبر می باشد";
+                $err = jsTranslate::translate('invalidUrl');
                 break;
             case -126 :
-                $err = "کدشناسایی پذیرنده معتبر نمی باشد";
+                $err = jsTranslate::translate('acceptanceCodeIsNotValid');
                 break;
             case 0 :
-                $err = "پرداخت با موفقیت انجام شد";
+                $err = jsTranslate::translate('paymentWasSuccessful');
                 break;
             case 1 :
-                $err = "صادرکننده کارت از انجام تراکنش صرف نظر کرد";
+                $err = jsTranslate::translate('cardIssuerDeclinedToCompleteTheTransaction');
                 break;
             case 3:
-                $err = "پذیرنده فروشگاهی نامعتبر می باشد";
+                $err = jsTranslate::translate('invalidStoreAcceptor');
                 break;
             case 5:
-                $err = "از انجام تراکنش صرف نظر شد";
+                $err = jsTranslate::translate('transactionWasDiscarded');
                 break;
             case 6:
-                $err = "بروز خطایی ناشناخته";
+                $err = jsTranslate::translate('unknownErrors');
                 break;
             case 12:
-                $err = "تراکنش نامعتبر است";
+                $err = jsTranslate::translate('transactionInvalid');
                 break;
             case 13:
-                $err = "مبلغ تراکنش نادرست است";
+                $err = jsTranslate::translate('transactionAmountIsIncorrect');
                 break;
             case 14:
-                $err = "شماره کارت ارسالی نامعتبراست";
+                $err = jsTranslate::translate('cardNumberInvalid');
                 break;
             case 17:
-                $err = "مشتری درخواست کننده حذف شده";
+                $err = jsTranslate::translate('customerRequestDeleted');
                 break;
             case 33:
-                $err = "تاریخ انقضای کارت سپری شده است";
+                $err = jsTranslate::translate('expiredExpirationDate');
                 break;
             case 41:
-                $err = "کارت مفقودی می باشد";
+                $err = jsTranslate::translate('cardIsMissing');
                 break;
             case 43:
-                $err = "کارت مسروقه می باشد";
+                $err = jsTranslate::translate('cardIsStolen');
                 break;
             case 51:
-                $err = "موجودی کافی نمی باشد";
+                $err = jsTranslate::translate('inventoryIsNotEnough');
                 break;
             case 54:
-                $err = "تاریخ انقضای کارت سپری شده است";
+                $err = jsTranslate::translate('expiredExpirationDate');
                 break;
             case 55:
-                $err = "رمز کارت نامعتبر است";
+                $err = jsTranslate::translate('passwordIsInvalid');
                 break;
             case 56:
-                $err = "کارت نامعتبر است";
+                $err = jsTranslate::translate('cardIsInvalid');
                 break;
             case 62:
-                $err = "کارت محدود شده";
+                $err = jsTranslate::translate('cardIsLimited');
                 break;
             case 78:
-                $err = "کارت فعال نیست";
+                $err = jsTranslate::translate('cardNotEnable');
                 break;
             default:
-                $err = "خطای نا مشخص";
+                $err = jsTranslate::translate('unknownError');
                 break;
         }
 
