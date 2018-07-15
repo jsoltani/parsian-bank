@@ -44,7 +44,7 @@ if($Code == 0){
 echo "<h2>Error : </h2><span>$Message</span>";
 ```
 
-## Example For Pay 
+## Example For Callback 
 ```
 $Token = $_REQUEST['Token'] ?? '';
 $Status = $_REQUEST['status'] ?? -1;
