@@ -152,7 +152,7 @@ class jsBankParsian
      * @param int $errCode
      * @return string
      */
-    private static function errors($errCode = -1)
+    public static function errors($errCode = -1)
     {
         switch ($errCode) {
             case -1 :
