@@ -4,7 +4,7 @@
     "description": " parsian-bank is a class for connect to parsian bank ",
     "homepage": "https://github.com/jsoltani/parsian-bank",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "minimum-stability": "stable",
     "authors": [
         {
