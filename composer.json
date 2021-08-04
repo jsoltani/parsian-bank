@@ -13,10 +13,8 @@
         }
     ],
     "require": {
-      "php": ">=7.0"
-    },
-    "require-dev": {
-      "econea/nusoap": "dev-master"
+      "php": ">=7.0",
+		  "econea/nusoap": "^0.9.11"
     },
     "autoload": {
       "classmap": ["src/"],
